@@ -23,4 +23,4 @@ COPY . .
 EXPOSE 5000
 
 # Đặt lệnh mặc định để khởi động ứng dụng sử dụng make
-CMD ["make", "start"]
+CMD ["python3", "run.py"]
