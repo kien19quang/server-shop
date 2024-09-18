@@ -23,8 +23,10 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Sao chép toàn bộ mã nguồn của bạn vào thư mục /app
 COPY . .
 
+# Sao chép tệp .env.production vào thư mục /app
+COPY .env.production .env
+
 # Mở port cho ứng dụng (port 5000)
 EXPOSE 5000
 
-# Sử dụng Gunicorn để chạy ứng dụng Flask
 CMD ["python3", "-m", "flask", "run", "--host=0.0.0.0"]
